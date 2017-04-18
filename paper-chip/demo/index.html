@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>paper-chip demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../iron-icons/iron-icons.html">
+  <link rel="import" href="../../paper-input/paper-input.html">
+  <link rel="import" href="../paper-chip.html">
+  <link rel="import" href="../paper-chip-input.html">
+
+  <style is="custom-style" include="demo-pages-shared-styles">
+
+  </style>
+</head>
+
+<body unresolved>
+  <div class="vertical-section-container centered">
+    <h3>Basic paper-chip's</h3>
+    <demo-snippet>
+      <template>
+        <paper-chip label="Basic"></paper-chip>
+
+        <paper-chip label="Basic with Avatar Text">
+          <span class="chip-background" slot="avatar">
+            <span>T</span>
+          </span>
+        </paper-chip>
+
+        <paper-chip label="Closable" closable></paper-chip>
+
+        <paper-chip label="Closable and image" closable>
+          <img class="chip-image" slot="avatar" src="images/avatar.png" alt="Contact Person">
+        </paper-chip>
+
+        <paper-chip label="Closable and icon" closable>
+          <span class="chip-background" slot="avatar">
+            <iron-icon icon="icons:favorite"></iron-icon>
+          </span>
+        </paper-chip>
+
+      </template>
+    </demo-snippet>
+
+    <h3>paper-chip's with custom styles</h3>
+    <demo-snippet>
+      <template>
+        <paper-chip label="Custom Label Color" class="custom-label-color"></paper-chip>
+
+        <paper-chip label="Custom Background Color" class="custom-background"></paper-chip>
+
+        <paper-chip label="Custom Avatar Background Color" class="custom-avatar-background">
+          <span class="chip-background" slot="avatar">
+            <span>T</span>
+          </span>
+        </paper-chip>
+
+        <paper-chip label="Custom Avatar Font and Icon Color" class="custom-avatar-font-color">
+          <span class="chip-background" slot="avatar">
+            <iron-icon icon="icons:favorite"></iron-icon>
+          </span>
+        </paper-chip>
+
+        <style is="custom-style">
+          paper-chip.custom-label-color {
+            --paper-chip-label-color: #4db6ac;
+          }
+
+          paper-chip.custom-background {
+            --paper-chip-background-color: #64b5f6;
+          }
+
+          paper-chip.custom-avatar-background {
+            --paper-chip-avatar-background-color: #64b5f6;
+          }
+
+          paper-chip.custom-avatar-font-color {
+            --paper-chip-avatar-font-color: red;
+          }
+        </style>
+
+      </template>
+    </demo-snippet>
+
+    <h3>paper-chip's used as tags</h3>
+    <demo-snippet>
+      <template>
+
+        <paper-chip-input label="+Tag (Enter)" items='["one", "two", "three"]' closable></paper-chip-input>
+
+        <paper-chip-input label="+Tag (Enter)">
+          <paper-chip label="Default Tag" slot="input"></paper-chip>
+          <paper-chip label="Default Tag Closbale" closable slot="input"></paper-chip>
+        </paper-chip-input>
+
+      </template>
+    </demo-snippet>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<!--
+
+Material design: [Chips](https://material.io/guidelines/components/chips.html)
+
+`paper-chip`
+Paper-chip's represent complex entities in small blocks, such as a contact.
+
+### Styling
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-chip-label-color` | The paper-chip label-color | `rgba(0, 0, 0, 0.6)`
+`--paper-chip-background-color` | The paper-chip background-color | `#e4e4e4`
+`--paper-chip-avatar-background-color` | The paper-chip avatar background-color | `#757575`
+`--paper-chip-avatar-font-color` | The paper-chip avatar font and icon color | `#ffffff`
+
+@element paper-chip
+@demo demo/index.html
+-->
+
+<dom-module id="paper-chip">
+  <template>
+    <style>
+      .chip {
+        font-family: "Roboto", sans-serif;
+        display: inline-block;
+        height: 32px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--paper-chip-label-color, rgba(0, 0, 0, 0.6));
+        line-height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        background-color: var(--paper-chip-background-color, #e4e4e4);
+        margin-bottom: 5px;
+        margin-right: 5px;
+      }
+
+      .chip .closeIcon {
+        --iron-icon-height: 16px;
+        --iron-icon-width: 16px;
+        top: -1px;
+        position: relative;
+        padding-left: 5px;
+        cursor: pointer;
+        float: right
+      }
+
+      .chip .inline {
+        display: -webkit-inline-box;
+      }
+
+      slot[name='avatar']::slotted(.chip-image) {
+        float: left;
+        margin: 0 8px 0 -12px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+      }
+
+      slot[name='avatar']::slotted(.chip-background) {
+        --iron-icon-height: 19px;
+        --iron-icon-width: 19px;
+        background: var(--paper-chip-avatar-background-color, #757575);
+        border-radius: 50%;
+        color: var(--paper-chip-avatar-font-color, #ffffff);
+        float: left;
+        font-weight: bold;
+        font-size: 16px;
+        height: 32px;
+        margin: 0 8px 0 -12px;
+        text-align: center;
+        width: 32px;
+      }
+
+      [hidden] {
+        display: none;
+      }
+    </style>
+
+    <div class="chip">
+      [[label]]
+      <slot name="avatar"></slot>
+      <div hidden$="[[_displayCloseIcon(closable)]]" class="closeIcon" on-click="_remove">
+        <iron-icon class="close" icon="icons:clear"></iron-icon>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    class PaperChip extends Polymer.Element {
+
+      static get is() {
+        return 'paper-chip';
+      }
+
+      static get properties() {
+        return {
+          label: {
+            type: String,
+            value: 'Default Label'
+          },
+          closable: {
+            type: Boolean,
+            value: false
+          }
+        };
+      }
+
+      _remove(event) {
+        this.parentNode.removeChild(this);
+      }
+
+      _displayCloseIcon(closable) {
+        return closable ? false : true;
+      }
+
+    }
+    window.customElements.define(PaperChip.is, PaperChip);
+  </script>
+</dom-module>
