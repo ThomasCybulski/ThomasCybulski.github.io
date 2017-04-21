@@ -51,11 +51,11 @@
       }
     }
   },
-  "_release": "01f1825a2f",
+  "_release": "9ddff7871e",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "01f1825a2fa2a681357ccc3e44b1b5251be72113"
+    "commit": "9ddff7871efe888b5f9a2bd997d7e799ac32b66c"
   },
   "_source": "https://github.com/PolymerElements/iron-demo-helpers.git",
   "_target": "2.0-preview",
