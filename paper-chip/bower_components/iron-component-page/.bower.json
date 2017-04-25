@@ -52,11 +52,11 @@
   "main": "iron-component-page.html",
   "ignore": [],
   "homepage": "https://github.com/PolymerElements/iron-component-page",
-  "_release": "d66a16b641",
+  "_release": "40cc0516ab",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "d66a16b641eed6be21746ebaea866d70e3c4afb1"
+    "commit": "40cc0516ab1423a05f3e3c60dcf66b1b499d852a"
   },
   "_source": "https://github.com/PolymerElements/iron-component-page.git",
   "_target": "2.0-preview",

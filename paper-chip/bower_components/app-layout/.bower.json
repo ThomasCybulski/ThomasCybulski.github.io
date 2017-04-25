@@ -11,6 +11,9 @@
     "url": "git://github.com/PolymerElements/app-layout"
   },
   "main": "app-layout.html",
+  "demos": {
+    "Demos": "demo/index.html"
+  },
   "dependencies": {
     "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
     "iron-media-query": "PolymerElements/iron-media-query#2.0-preview",
@@ -58,11 +61,11 @@
   },
   "ignore": [],
   "private": true,
-  "_release": "da4a33b447",
+  "_release": "c298d0399e",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "da4a33b4472938178fccc11bb14e48634e39752c"
+    "commit": "c298d0399ec2f63b971ae8f475def0114e2484e6"
   },
   "_source": "https://github.com/PolymerElements/app-layout.git",
   "_target": "2.0-preview",

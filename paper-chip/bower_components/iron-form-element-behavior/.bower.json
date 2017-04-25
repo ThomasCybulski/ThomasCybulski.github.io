@@ -40,11 +40,11 @@
   },
   "ignore": [],
   "homepage": "https://github.com/PolymerElements/iron-form-element-behavior",
-  "_release": "7498283632",
+  "_release": "e29ee12e8b",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "74982836324a2b2de64d0fbcd10f4adf021e8ed0"
+    "commit": "e29ee12e8bd34e9f1b6d22ceef1e05e1c984eecf"
   },
   "_source": "https://github.com/PolymerElements/iron-form-element-behavior.git",
   "_target": "2.0-preview",

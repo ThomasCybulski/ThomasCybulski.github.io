@@ -47,11 +47,11 @@
       }
     }
   },
-  "_release": "1845d34714",
+  "_release": "e49c24522e",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "1845d34714033d6802c7917fffa3b4cbbde0dbd0"
+    "commit": "e49c24522edc6c00bb51ec5158aeceaa52b9b51d"
   },
   "_source": "https://github.com/PolymerElements/prism-element.git",
   "_target": "2.0-preview",
