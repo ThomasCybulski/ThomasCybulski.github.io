@@ -51,7 +51,7 @@
     "branch": "2.0-preview",
     "commit": "5c3c35201d7070738bfbfd03ac9637238946c760"
   },
-  "_source": "https://github.com/PolymerElements/paper-styles.git",
+  "_source": "https://github.com/polymerelements/paper-styles.git",
   "_target": "2.0-preview",
-  "_originalSource": "PolymerElements/paper-styles"
+  "_originalSource": "polymerelements/paper-styles"
 }

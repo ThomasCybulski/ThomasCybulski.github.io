@@ -47,11 +47,11 @@
   },
   "ignore": [],
   "homepage": "https://github.com/polymerelements/marked-element",
-  "_release": "37a549edc1",
+  "_release": "19c167ef30",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "37a549edc1fcf122cc0df5e9710497cbfdd56990"
+    "commit": "19c167ef30a13777cacb702bacb64845f1dbd137"
   },
   "_source": "https://github.com/polymerelements/marked-element.git",
   "_target": "2.0-preview",

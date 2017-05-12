@@ -1,9 +1,10 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="bower_components/iron-icons/iron-icons.html">
 
 <!--
 
-Material design: [Chips](https://material.io/guidelines/components/chips.html)
+Material design: [Chips](https://material.io/guidelines/components/chips.html#chips-specs)
 
 `paper-chip`
 Paper-chip's represent complex entities in small blocks, such as a contact.
@@ -38,6 +39,24 @@ Custom property | Description | Default
         background-color: var(--paper-chip-background-color, #e4e4e4);
         margin-bottom: 5px;
         margin-right: 5px;
+      }
+
+      .chip:hover {
+        @apply --shadow-elevation-2dp;
+        cursor: default;
+      }
+
+      .unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .chip:active {
+        background: #d6d6d6;
       }
 
       .chip .closeIcon {
@@ -82,7 +101,7 @@ Custom property | Description | Default
       }
     </style>
 
-    <div class="chip">
+    <div class="chip unselectable">
       [[label]]
       <slot name="avatar"></slot>
       <div hidden$="[[_displayCloseIcon(closable)]]" class="closeIcon" on-click="_remove">
