@@ -33,7 +33,7 @@ The Markdown source can be specified several ways:
 #### Use `<script type="text/markdown">` element child to inline markdown
 
     <marked-element>
-      <div class="markdown-html"></div>
+      <div slot="markdown-html"></div>
       <script type="text/markdown">
         Check out my markdown!
 
@@ -51,7 +51,7 @@ The Markdown source can be specified several ways:
 #### Use `<script type="text/markdown" src="URL">` element child to specify remote markdown
 
     <marked-element>
-      <div class="markdown-html"></div>
+      <div slot="markdown-html"></div>
       <script type="text/markdown" src="../guidelines.md"></script>
     </marked-element>
 
@@ -62,7 +62,7 @@ Though, you can data bind to the `src` attribute to change the markdown.
 
 ```html
 <marked-element>
-  <div class="markdown-html"></div>
+  <div slot="markdown-html"></div>
   <script type="text/markdown" src$="[[source]]"></script>
 </marked-element>
 ...
@@ -200,15 +200,17 @@ as you would a regular DOM element:
         return;
       }
 
-      this.markdown = this._unindent(this._markdownElement.textContent);
-
       if (this._markdownElement.src) {
         this._request(this._markdownElement.src);
-      } else {
-        var observer = new MutationObserver(this._onScriptAttributeChanged
-            .bind(this));
-        observer.observe(this._markdownElement, { attributes: true })
       }
+
+      if (this._markdownElement.textContent.trim() !== '') {
+        this.markdown = this._unindent(this._markdownElement.textContent);
+      }
+
+      var observer = new MutationObserver(this._onScriptAttributeChanged
+          .bind(this));
+      observer.observe(this._markdownElement, { attributes: true });
     },
 
     /**
@@ -270,7 +272,7 @@ as you would a regular DOM element:
      */
     render: function() {
       if (!this._attached) {
-        return
+        return;
       };
 
       if (!this.markdown) {
