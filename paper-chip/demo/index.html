@@ -108,6 +108,8 @@
 
 				<paper-chip-input label="+Add (Enter) -Delete (Backspace)" items='["one", "two", "three"]' closable></paper-chip-input>
 
+				<paper-chip-input label="Input is readonly" items='["one", "two"]' readonly></paper-chip-input>
+
 				<paper-chip-input always-float-label label="+Add (Enter) -Delete (Backspace)">
 					<paper-chip label="Default Tag" slot="input"></paper-chip>
 					<paper-chip label="Default Tag Closable" closable slot="input"></paper-chip>
@@ -132,7 +134,7 @@
 				<paper-chip-input-autocomplete id="basicAutocomplete" label="Search Item ... " closable></paper-chip-input-autocomplete>
 
 				<paper-chip-input-autocomplete id="autocompleteAdditionalItems" label="Search or add additional items (Enter) (Cannot be empty)"
-				 additional-items required auto-validate error-message="needs some text!" closable></paper-chip-input-autocomplete>
+				 additional-items allow-duplicates required auto-validate error-message="needs some text!" closable></paper-chip-input-autocomplete>
 
 			</template>
 		</demo-snippet>
